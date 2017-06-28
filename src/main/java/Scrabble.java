@@ -11,6 +11,20 @@ public class Scrabble {
       score += 1;
       } else if (eachLetter.equals("d") || eachLetter.equals("g")){
         score += 2;
+      } else if (eachLetter.equals("b") || eachLetter.equals("c") ||
+        eachLetter.equals("m") || eachLetter.equals("p")) {
+        score += 3;
+      } else if (eachLetter.equals("f") || eachLetter.equals("h") ||
+        eachLetter.equals("v") || eachLetter.equals("w") || eachLetter.equals("y")) {
+        score += 4;
+      } else if (eachLetter.equals("k")) {
+        score += 5;
+      }  else if (eachLetter.equals("j")  || eachLetter.equals("x") ) {
+        score += 8;
+      } else if ( eachLetter.equals("q")  || eachLetter.equals("z") ) {
+        score += 10;
+      } else {
+        System.out.println("Not a word");
       }
     }
     return score;
